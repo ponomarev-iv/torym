@@ -1,0 +1,39 @@
+/**
+ * Created by Pompo on 14.11.2016.
+ */
+.header{
+  background: $main-color;
+  height: 80px;
+  box-sizing: border-box;
+  padding: 20px 0 0;
+
+  @extend %animation-block;
+
+  &__logo{
+    font-size: $xs-size;
+    color: $sec-color;
+    padding-top: 10px;
+    font-family: $PT-Sans;
+  }
+
+  &__contact{
+    text-align: right;
+    color: #fff;
+    font-family: $Bitter-bold;
+    font-size: $normal-size;
+
+    & > span{
+      color: $sec-color;
+      font-family: $PT-Sans;
+      font-size: $xs-size;
+      line-height: 1.4;
+      display: block;
+    }
+  }
+}
+
+.logo{
+  background: url('../img/logo.png') no-repeat 0 50% / cover;
+  width: 156px;
+  height: 17px;
+}

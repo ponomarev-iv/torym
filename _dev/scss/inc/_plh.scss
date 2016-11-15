@@ -1,0 +1,15 @@
+/**
+ * Created by Pompo on 14.11.2016.
+ */
+%animation-block{
+  animation: opacity-block .45s ease-in-out 1;
+}
+
+@keyframes opacity-block {
+  from{
+    opacity: 0;
+  }
+  to{
+    opacity: 1;
+  }
+}
