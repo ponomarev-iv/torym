@@ -1,49 +1,64 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>Торум</title>
-    <link rel="stylesheet" href="libs/bootstrap.min.css">
-    <link rel="stylesheet" href="css/all.css">
-</head>
-<body>
-<header class="header">
+//= inc/header.inc.html
+
+<!--swiper-->
+//= inc/hero-banner.inc.html
+
+<section class="c-section">
     <div class="container">
         <div class="row">
-            <div class="col-md-3">
-                <div class="header__logo">
-                    <div class="logo"></div>
-                    электротехническая компания
-                </div>
-            </div>
-            <div class="col-md-6">
-                <nav>
-                    <ul class="main-nav">
-                        <li class="main-nav__item"><a href="#" class="main-nav__link">Компания</a></li>
-                        <li class="main-nav__item"><a href="#" class="main-nav__link">Каталог</a></li>
-                        <li class="main-nav__item"><a href="#" class="main-nav__link">Складская справка</a></li>
-                        <li class="main-nav__item"><a href="#" class="main-nav__link">Контакты</a></li>
-                    </ul>
-                </nav>
-            </div>
-            <div class="col-md-3">
-                <div class="header__contact">
-                    <span>
-                        zakaz@torum-perm.ru
-                    </span>
-                    +7 (342) 224 28 58
-                </div>
-            </div>
-        </div>
-    </div>
-</header>
-<div class="container">
-    <div class="row">
-        <div class="col-md-12">
-            <h1>Привет Мир!</h1>
-        </div>
-    </div>
-</div>
+            <div class="col-md-12">
+                <h2 class="c-section__title">Электрощитовое оборудование</h2>
 
-</body>
-</html>
+                <!--slider-->
+                <div id="equipment-slider" class="swiper-container">
+                    <div class="swiper-wrapper">
+                        <!-- Slides -->
+                        <div class="swiper-slide">
+                           <div class="equipment__item">
+                               <img src="equipment-1.png" alt="">
+                               <h3 class="equipment__item-txt">Вводно-
+                                   распределительные
+                                   устройства</h3>
+                           </div>
+                        </div>
+                        <div class="swiper-slide">
+                            <div class="equipment__item">
+                                <img src="equipment-2.png" alt="">
+                                <h3 class="equipment__item-txt">Главные
+                                    распределительные
+                                    щиты
+                                </h3>
+                            </div>
+                        </div>
+                        <div class="swiper-slide">
+                            <div class="equipment__item">
+                                <img src="equipment-3.png" alt="">
+                                <h3 class="equipment__item-txt">Силовые
+                                    щиты
+                                </h3>
+                            </div>
+                        </div>
+                        <div class="swiper-slide">
+                            <div class="equipment__item equipment__item_offer">
+                                <img src="equipment-4.png" alt="">
+                                <h3 class="equipment__item-txt">Специальные
+                                    предложения</h3>
+                            </div>
+                        </div>
+                        <div class="swiper-slide">
+                            <div class="equipment__item">
+                                <img src="equipment-5.png" alt="">
+                                <h3 class="equipment__item-txt">Lorem ipsum dolor</h3>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="swiper-button-prev"></div>
+                    <div class="swiper-button-next"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+//= inc/footer.inc.html

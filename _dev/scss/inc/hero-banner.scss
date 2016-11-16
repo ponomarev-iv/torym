@@ -1,0 +1,31 @@
+.hero-banner{
+    width: 100%;
+    color: $main-color;
+
+    &_cabel{
+        background: url('../img/bg-banner_cabel.jpg') no-repeat scroll 50% 50% / cover;
+        height: 100%;
+    }
+
+    &_board{
+        background: url('../img/bg-banner_board.jpg') no-repeat scroll 50% 50% / cover;
+        height: 100%;
+    }
+
+    &__title{
+        font-family: $Bitter;
+        font-size: $bid-size*2;
+        font-weight: 400;
+        margin: 2em 0 .75em;
+        line-height: 1;
+        width: 50%;
+    }
+
+    &__txt{
+        font-family: $PT-Sans;
+        font-size: $normal-size;
+        line-height: 1.2;
+        margin: 0 0 1em;
+        width: 35%;
+    }
+}

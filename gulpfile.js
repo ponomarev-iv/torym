@@ -40,7 +40,7 @@ var path = {
         img: '_dev/img/*.*',
         sprite: '_dev/img/sprite/*.*',
         js: '_dev/js/*',
-        html: '_dev/tmpl/*.html'
+        html: '_dev/tmpl/**/*.html'
     },
     clean: 'public/'
 };
@@ -122,7 +122,6 @@ gulp.task('image:build', function () {
 
 gulp.task('js:build', function () {
     gulp.src(path.src.js)
-        .pipe(rigger())
         .pipe(uglify())
         .pipe(gulp.dest(path.build.js))
         .pipe(reload({stream: true}));

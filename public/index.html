@@ -1,9 +1,10 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ru">
 <head>
     <meta charset="UTF-8">
     <title>Торум</title>
     <link rel="stylesheet" href="libs/bootstrap.min.css">
+    <link rel="stylesheet" href="libs/swiper.min.css">
     <link rel="stylesheet" href="css/all.css">
 </head>
 <body>
@@ -37,13 +38,108 @@
         </div>
     </div>
 </header>
-<div class="container">
-    <div class="row">
-        <div class="col-md-12">
-            <h1>Привет Мир!</h1>
+
+<!--swiper-->
+<div id="hero-banner" class="swiper-container">
+
+    <div class="swiper-wrapper">
+        <!-- Slide 1 -->
+        <div class="swiper-slide">
+            <div class="hero-banner_cabel">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-md-12">
+                            <h1 class="hero-banner__title">Поставляем<br> кабельно-проводниковую<br> продукцию</h1>
+                            <p class="hero-banner__txt">
+                                Мы&nbsp;предлагаем щитовое электрооборудование собственного производства, соответствующее высоким стандартам качества и&nbsp;безопасности.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Slide 2 -->
+        <div class="swiper-slide">
+            <div class="hero-banner_board">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-md-12">
+                            <h1 class="hero-banner__title">Производим<br> электрощитовое<br> оборудование</h1>
+                            <p class="hero-banner__txt">
+                                Мы&nbsp;предлагаем щитовое электрооборудование собственного производства, соответствующее высоким стандартам качества и&nbsp;безопасности.
+                            </p>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
         </div>
     </div>
+    <!-- If we need pagination -->
+    <div class="swiper-pagination"></div>
 </div>
 
+<section class="c-section">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12">
+                <h2 class="c-section__title">Электрощитовое оборудование</h2>
+
+                <!--slider-->
+                <div id="equipment-slider" class="swiper-container">
+                    <div class="swiper-wrapper">
+                        <!-- Slides -->
+                        <div class="swiper-slide">
+                           <div class="equipment__item">
+                               <img src="equipment-1.png" alt="">
+                               <h3 class="equipment__item-txt">Вводно-
+                                   распределительные
+                                   устройства</h3>
+                           </div>
+                        </div>
+                        <div class="swiper-slide">
+                            <div class="equipment__item">
+                                <img src="equipment-2.png" alt="">
+                                <h3 class="equipment__item-txt">Главные
+                                    распределительные
+                                    щиты
+                                </h3>
+                            </div>
+                        </div>
+                        <div class="swiper-slide">
+                            <div class="equipment__item">
+                                <img src="equipment-3.png" alt="">
+                                <h3 class="equipment__item-txt">Силовые
+                                    щиты
+                                </h3>
+                            </div>
+                        </div>
+                        <div class="swiper-slide">
+                            <div class="equipment__item equipment__item_offer">
+                                <img src="equipment-4.png" alt="">
+                                <h3 class="equipment__item-txt">Специальные
+                                    предложения</h3>
+                            </div>
+                        </div>
+                        <div class="swiper-slide">
+                            <div class="equipment__item">
+                                <img src="equipment-5.png" alt="">
+                                <h3 class="equipment__item-txt">Lorem ipsum dolor</h3>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="swiper-button-prev"></div>
+                    <div class="swiper-button-next"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<script src="libs/jquery.min.js"></script>
+<script src="libs/swiper.min.js"></script>
+<script src="js/main.js"></script>
 </body>
 </html>

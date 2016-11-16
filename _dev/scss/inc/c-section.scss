@@ -1,0 +1,11 @@
+.c-section{
+    padding: 2rem 0;
+
+    &__title{
+        margin: 0 0 2em;
+        font-size: $xs-size*2 + 1;
+        font-family: $Bitter-bold;
+        color: $main-color;
+        font-weight: normal;
+    }
+}

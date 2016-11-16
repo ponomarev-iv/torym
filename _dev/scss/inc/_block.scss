@@ -1,0 +1,13 @@
+//оборудование
+.equipment{
+
+    &__item{
+        text-align: center;
+        color: $main-color;
+
+        &-txt{
+            font-size: $normal-size;
+            font-family: $PT-Sans-bold;
+        }
+    }
+}
