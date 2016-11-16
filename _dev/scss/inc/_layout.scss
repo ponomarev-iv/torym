@@ -4,3 +4,9 @@
 body{
   font-family: 'PTSans', sans-serif;
 }
+
+p{
+  font-family: $PT-Sans;
+  font-size: $normal-size;
+  margin: 0 0 1.3em;
+}

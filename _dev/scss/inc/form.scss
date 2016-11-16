@@ -1,0 +1,75 @@
+/**
+ * Created by Pompo on 17.11.2016.
+ */
+
+.form-row{
+  margin-bottom: .5rem;
+
+  &:after{
+    content: '';
+    display: table;
+    clear: both;
+  }
+}
+
+.unit{
+  float: left;
+  padding-left: .5%;
+
+  &_single-left{
+    padding-left: 0;
+  }
+}
+
+.unit-33{
+  width: 33%;
+}
+
+.unit-66{
+  width: 66%;
+}
+
+//input
+.reg-inp{
+  width: 100%;
+  border: none;
+  box-sizing: border-box;
+  height: 36px;
+  padding: 8px 10px;
+  font-size: $normal-size;
+}
+
+textarea{
+  width: 100%;
+  border: none;
+  padding: 8px 10px;
+  font-size: $normal-size;
+  box-sizing: border-box;
+}
+
+//button
+.form-btn{
+  width: 100%;
+  margin-bottom: .5rem;
+  border: none;
+  box-sizing: border-box;
+  text-align: center;
+  height: 36px;
+  font-size: $normal-size;
+  color: #fff;
+  font-family: $PT-Sans;
+
+  &:last-child{
+    margin-bottom: 0;
+  }
+
+  &_attach {
+    background: $disabled;
+  }
+
+  &_send{
+    background: #2cb3d5;
+    font-family: $PT-Sans-bold;
+    font-size: $normal-size + 1;
+  }
+}

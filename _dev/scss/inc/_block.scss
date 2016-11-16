@@ -8,6 +8,56 @@
         &-txt{
             font-size: $normal-size;
             font-family: $PT-Sans-bold;
+            line-height: 1.1;
         }
+
+        &_offer{
+            position: relative;
+
+            & .equipment__item-txt{
+                color: $sale-color;
+            }
+
+            &:after{
+                position: absolute;
+                content: '';
+                top: calc(50% - 50px);
+                left: calc(50% - 60px);
+                background: url('../img/sale-hand.png') no-repeat scroll transparent;
+                width: 119px;
+                height: 86px;
+            }
+        }
+    }
+}
+
+//форма заказа на главной
+.main-order{
+    padding: 48px 0;
+    background: $bg-grey;
+
+    &__title{
+        font-family: $Bitter-bold;
+        font-size: $xs-size*2 + 1;
+        margin: 0;
+        line-height: 1.2;
+    }
+}
+
+//производство
+.production{
+    background: url('../img/bg-production.jpg') no-repeat scroll transparent 50% 50% / cover;
+
+    &__wrap{
+        margin: 60px -38px;
+        padding: 38px;
+        background: rgba(255,255,255,.8);
+    }
+
+    &__title{
+        font-family: $Bitter;
+        font-size: $xl-size;
+        margin: 0;
+        line-height: 1.2;
     }
 }
