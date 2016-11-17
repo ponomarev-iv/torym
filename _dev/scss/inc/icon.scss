@@ -1,0 +1,25 @@
+@import "sprite";
+
+.icon{
+    display: inline-block;
+}
+
+.icon-job {
+    @include sprite($i-job);
+}
+
+.icon-delivery {
+    @include sprite($i-delivery);
+}
+
+.icon-garant {
+    @include sprite($i-garant);
+}
+
+.icon-minimal {
+    @include sprite($i-minimal);
+}
+
+.icon-search {
+    @include sprite($i-search);
+}

@@ -6,7 +6,8 @@ function swiperInit(){
     if($('#hero-banner').length){
         var mySwiper = new Swiper('#hero-banner', {
             pagination: '.swiper-pagination',
-            paginationClickable: true
+            paginationClickable: true,
+            autoplay: 2500
         });
     } else{
         return false;

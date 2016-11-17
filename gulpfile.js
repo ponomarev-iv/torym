@@ -76,7 +76,7 @@ gulp.task('sprite:build', function () {
             }));
 
     spriteData.img.pipe(gulp.dest(path.build.img));
-    spriteData.css.pipe(gulp.dest(path.src.scss));
+    spriteData.css.pipe(gulp.dest('_dev/scss/inc/'));
 
 });
 
