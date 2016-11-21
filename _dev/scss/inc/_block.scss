@@ -8,6 +8,14 @@
         font-family: $Bitter-bold;
         color: $main-color;
         font-weight: normal;
+
+        @include respondTo(tablet){
+            text-align: center;
+        }
+
+        @include respondTo(small){
+            font-size: $xl-size;
+        }
     }
 }
 
@@ -54,6 +62,10 @@
         font-size: $xs-size*2 + 1;
         margin: 0;
         line-height: 1.2;
+
+        @include respondTo(tablet){
+            margin-bottom: 1rem;
+        }
     }
 }
 
@@ -65,6 +77,15 @@
         margin: 60px -38px;
         padding: 38px;
         background: rgba(255,255,255,.8);
+
+        @include respondTo(desktop){
+            margin: 60px 0;
+        }
+
+        @include respondTo(small){
+            margin: 30px 0;
+            padding: 25px;
+        }
     }
 
     &__title{
@@ -72,6 +93,14 @@
         font-size: $xl-size;
         margin: 0;
         line-height: 1.2;
+
+        @include respondTo(tablet){
+            margin-bottom: 1rem;
+        }
+
+        @include respondTo(small){
+            font-size: $xl-size - 2;
+        }
     }
 }
 
@@ -100,25 +129,45 @@
         line-height: 1.1;
         text-align: center;
         margin: 20px 0 0;
+
+        @include respondTo(small){
+            font-size: $bid-size;
+        }
     }
 
     &__txt{
         font-family: $PT-Sans;
         font-size: $normal-size;
         color: $main-color;
+
+        @include respondTo(small){
+            font-size: $small-size;
+            line-height: 1;
+        }
     }
 }
 
 //карта на главной
 .map{
     height: 390px;
+    position: relative;
+
+    @include respondTo(small){
+        height: 240px;
+        margin-top: 200px;
+    }
 
     &_office{
         background: url('../img/map-office.jpg') no-repeat scroll transparent 50% 50% / cover;
+
+        @extend %animation-block;
+
     }
 
     &_sklad{
         background: url('../img/map-sklad.jpg') no-repeat scroll transparent 50% 50% / cover;
+
+        @extend %view-block;
     }
 
     &-content{
@@ -128,14 +177,30 @@
         text-align: center;
         margin: 30px 0;
 
+        @include respondTo(tablet){
+            background: rgba(255,255,255,.75);
+            padding: 20px;
+        }
+
+        @include respondTo(small){
+            margin: 0;
+            position: absolute;
+            top: -180px;
+            padding: 0;
+            background: #fff;
+            left: 50%;
+            transform: translateX(-50%);
+        }
+
         &__title{
             display: inline-block;
             text-decoration: underline;
             font-size: $normal-size;
             color: #aaaaaa;
             padding-right: 20px;
+            cursor: pointer;
 
-            &:last-child{
+            &:nth-child(2){
                 padding-right: 0;
             }
 
@@ -144,6 +209,7 @@
                 color: $main-color;
                 text-decoration: none;
                 font-size: $xs-size*2 + 1;
+                cursor: inherit;
             }
         }
 
@@ -152,6 +218,22 @@
             line-height: 3em;
             color: $main-color;
             font-family: $PT-Sans;
+            margin: 0;
+            display: none;
+
+            &.is-active{
+                display: block;
+            }
+
+            @include respondTo(small){
+                line-height: 1.8;
+            }
         }
+    }
+}
+
+.partner{
+    @include respondTo(tablet){
+        text-align: center;
     }
 }

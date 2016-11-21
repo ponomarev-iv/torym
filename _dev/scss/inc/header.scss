@@ -3,16 +3,20 @@
  */
 .header{
   background: $main-color;
-  height: 80px;
+  //height: 80px;
   box-sizing: border-box;
   padding: 20px 0 0;
 
   @extend %animation-block;
 
+  @include respondTo(small){
+    padding-bottom: 20px;
+  }
+
   &__logo{
     font-size: $xs-size;
     color: $sec-color;
-    padding-top: 10px;
+    padding: 10px 0 16px;
     font-family: $PT-Sans;
   }
 
@@ -21,6 +25,10 @@
     color: #fff;
     font-family: $Bitter-bold;
     font-size: $normal-size;
+
+    @include respondTo(small){
+      text-align: left;
+    }
 
     & > span{
       color: $sec-color;

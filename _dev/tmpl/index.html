@@ -100,7 +100,7 @@
         </div>
 
         <div class="row">
-            <div class="col-md-3">
+            <div class="col-md-3 col-sm-6 col-xs-6">
                 <div class="advantage__item">
                     <div class="advantage__icon">
                         <div class="icon icon-job"></div>
@@ -109,7 +109,7 @@
                     <span class="advantage__txt">с 2005 года</span>
                 </div>
             </div>
-            <div class="col-md-3">
+            <div class="col-md-3 col-sm-6 col-xs-6">
                 <div class="advantage__item">
                     <div class="advantage__icon">
                         <div class="icon icon-garant"></div>
@@ -118,7 +118,7 @@
                     <span class="advantage__txt">качество товаров и услуг</span>
                 </div>
             </div>
-            <div class="col-md-3">
+            <div class="col-md-3 col-sm-6 col-xs-6">
                 <div class="advantage__item">
                     <div class="advantage__icon">
                         <div class="icon icon-delivery"></div>
@@ -127,7 +127,7 @@
                     <span class="advantage__txt">любым видом трансопрта по РФ</span>
                 </div>
             </div>
-            <div class="col-md-3">
+            <div class="col-md-3 col-sm-6 col-xs-6">
                 <div class="advantage__item">
                     <div class="advantage__icon">
                         <div class="icon icon-minimal"></div>
@@ -147,17 +147,26 @@
 <section class="map map_office js-map">
     <div class="container">
         <div class="row">
-            <div class="col-md-3 col-sm-4 col-xs-6">
+            <div class="col-lg-3 col-md-4 col-sm-4 col-xs-6 reset-small">
                 <div class="map-content">
-                    <span class="map-content__title is-active js-map-switch">Офис</span>
-                    <span class="map-content__title js-map-switch">Склад</span>
+                    <span class="map-content__title is-active js-map-switch" data-href="#office">Офис</span>
+                    <span class="map-content__title js-map-switch" data-href="#sklad">Склад</span>
 
-                    <p>
+                    <p id="office" class="is-active js-tab">
                         Пермь<br>
                         <span class="phone-bold">+7 (342) 224-28-58</span><br>
                         ул. В. Каменского, 10А<br>
-                        zakaz@torum-perm.ru</p>
+                        zakaz@torum-perm.ru
+                    </p>
+
+                    <p id="sklad" class="js-tab">
+                        Пермь (Закамск)<br>
+                        <span class="phone-bold">+7 (342) 224-28-58</span><br>
+                        ул.&nbsp;Правобережная,&nbsp;18<br>
+                        zakaz@torum-perm.ru
+                    </p>
                 </div>
+
             </div>
         </div>
     </div>

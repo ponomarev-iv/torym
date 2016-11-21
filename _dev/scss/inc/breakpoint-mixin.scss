@@ -1,19 +1,19 @@
-$media-desctop: 1280px;
-$media-tablet: 980px;
+$media-desktop: 1280px;
+$media-tablet: 991px;
 $media-mobile: 768px;
 $media-small: 480px;
 
 $breakpoints: (
-        "desctop" :$media-desctop,
+        "desktop" :$media-desktop,
         "tablet" :$media-tablet,
         "mobile" : $media-mobile,
         "small" : $media-small,
         "small-mobile": ($media-small, $media-mobile),
         "small-tablet": ($media-small, $media-tablet),
-        "small-desctop": ($media-small, $media-desctop),
+        "small-desktop": ($media-small, $media-desktop),
         "mobile-tablet": ($media-mobile, $media-tablet),
-        "mobile-desctop": ($media-mobile, $media-desctop),
-        "tablet-desctop": ($media-tablet, $media-desctop),
+        "mobile-desktop": ($media-mobile, $media-desktop),
+        "tablet-desktop": ($media-tablet, $media-desktop),
         "retina" : "1px"
 );
 
@@ -30,8 +30,8 @@ $breakpoints: (
         @media only screen and (max-width: $media-tablet) {
             @content;
         }
-    } @else if $media == desctop {
-        @media only screen and (max-width: $media-desctop) {
+    } @else if $media == desktop {
+        @media only screen and (max-width: $media-desktop) {
             @content;
         }
     } @else if $media == small-mobile {
@@ -42,20 +42,20 @@ $breakpoints: (
         @media only screen and (min-width: $media-small) and (max-width: $media-tablet) {
             @content;
         }
-    } @else if $media == small-desctop {
-        @media only screen and (min-width: $media-small) and (max-width: $media-desctop) {
+    } @else if $media == small-desktop {
+        @media only screen and (min-width: $media-small) and (max-width: $media-desktop) {
             @content;
         }
     } @else if $media == mobile-tablet {
         @media only screen and (min-width: $media-mobile) and (max-width: $media-tablet) {
             @content;
         }
-    } @else if $media == mobile-desctop {
-        @media only screen and (min-width: $media-mobile) and (max-width: $media-desctop) {
+    } @else if $media == mobile-desktop {
+        @media only screen and (min-width: $media-mobile) and (max-width: $media-desktop) {
             @content;
         }
-    } @else if $media == tablet-desctop {
-        @media only screen and (min-width: $media-tablet) and (max-width: $media-desctop) {
+    } @else if $media == tablet-desktop {
+        @media only screen and (min-width: $media-tablet) and (max-width: $media-desktop) {
             @content;
         }
     } @else if $media == retina {

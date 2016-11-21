@@ -2,12 +2,54 @@
 
     & .swiper-slide{
         height: 355px;
+
+        @include respondTo(mobile){
+            height: 280px;
+        }
+
+        @include respondTo(small){
+            height: 360px;
+        }
     }
 
     & .swiper-pagination{
         position: absolute;
         bottom: 20px;
         left: 0;
+
+        @include respondTo(small){
+            display: none;
+        }
+    }
+}
+
+#partner-swiper{
+    & .swiper-wrapper{
+        display: inherit;
+
+        @include respondTo(small){
+            display: flex;
+        }
+    }
+
+    & .swiper-slide{
+        width: 25%;
+
+        @include respondTo(tablet){
+            width: 50%;
+        }
+
+        @include respondTo(small){
+            width: 100%;
+        }
+    }
+
+    & .swiper-button-next, .swiper-button-prev{
+        opacity: 0;
+
+        @include respondTo(small){
+            opacity: 1;
+        }
     }
 }
 
@@ -33,4 +75,40 @@
     font-family: $Bitter-bold;
     line-height: 1.4;
     white-space: nowrap;
+}
+
+.hide-tablet{
+    @include respondTo(tablet){
+        display: none;
+    }
+}
+
+.hide-mobile{
+    @include respondTo(mobile){
+        display: none;
+    }
+}
+
+.hide-small{
+    @include respondTo(small){
+        display: none;
+    }
+}
+
+.reset-small{
+    @include respondTo(small){
+        width: 100%;
+    }
+}
+
+.clr{
+    &:after{
+        content: "";
+        display: table;
+        clear: both;
+    }
+
+    @include respondTo(small){
+        //display: none;
+    }
 }

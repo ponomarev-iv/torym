@@ -3,6 +3,15 @@
     color: $sec-color;
     padding: 30px 0 40px;
 
+    @include respondTo(small){
+        padding: 20px 0;
+        text-align: center;
+
+        & .logo{
+            margin: 0 auto;
+        }
+    }
+
     &__nav{
         margin: 0;
         padding: 0;
@@ -26,6 +35,10 @@
 
     &__contact{
 
+        @include respondTo(small){
+            margin-top: 20px;
+        }
+
         & p{
             font-family: $PT-Sans;
             font-size: $normal-size;
@@ -41,6 +54,10 @@
 
     &__search{
         position: relative;
+
+        @include respondTo(tablet){
+            margin-top: 30px;
+        }
 
 
          & input{

@@ -5,11 +5,21 @@
     &_cabel{
         background: url('../img/bg-banner_cabel.jpg') no-repeat scroll 50% 50% / cover;
         height: 100%;
+
+        @include respondTo(small){
+            height: 200px;
+            background-position: 85% 50%;
+        }
     }
 
     &_board{
         background: url('../img/bg-banner_board.jpg') no-repeat scroll 50% 50% / cover;
         height: 100%;
+
+        @include respondTo(small){
+            height: 200px;
+            background-position: 85% 50%;
+        }
     }
 
     &__title{
@@ -18,7 +28,22 @@
         font-weight: 400;
         margin: 2em 0 .75em;
         line-height: 1;
-        width: 50%;
+        width: 60%;
+
+        @include respondTo(tablet){
+            font-size: $normal-size*2;
+        }
+
+        @include respondTo(mobile){
+            width: 100%;
+            font-size: $small-size*2;
+        }
+
+        @include respondTo(small){
+            width: 100%;
+            font-size: $xl-size - 2;
+            margin: .75em 0 .5em;
+        }
     }
 
     &__txt{
@@ -27,5 +52,27 @@
         line-height: 1.2;
         margin: 0 0 1em;
         width: 35%;
+
+        @include respondTo(tablet){
+            width: 50%;
+        }
+
+        @include respondTo(mobile){
+            width: 80%;
+        }
+
+        @include respondTo(small){
+            width: 100%;
+            font-size: $small-size;
+            margin-bottom: 1.5em;
+        }
+    }
+
+    &__wrap{
+        @include respondTo(small){
+            position: absolute;
+            bottom: 0;
+            background: $bg-grey;
+        }
     }
 }

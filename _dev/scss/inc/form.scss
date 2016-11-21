@@ -2,35 +2,57 @@
  * Created by Pompo on 17.11.2016.
  */
 
-.form-row{
+.form-row {
   margin-bottom: .5rem;
 
-  &:after{
+  @include respondTo(small) {
+    margin-bottom: 1rem;
+  }
+
+  &:last-child {
+    margin-bottom: 0;
+  }
+
+  &:after {
     content: '';
     display: table;
     clear: both;
   }
 }
 
-.unit{
+.unit {
   float: left;
   padding-left: .5%;
 
-  &_single-left{
+  &_single-left {
     padding-left: 0;
+  }
+
+  &.reset-small {
+
+    @include respondTo(small) {
+      width: 100%;
+      padding: 0 0 1rem;
+    }
+
+    &:last-child {
+      @include respondTo(small) {
+        padding-bottom: 0;
+      }
+    }
   }
 }
 
-.unit-33{
+.unit-33 {
   width: 33%;
 }
 
-.unit-66{
+.unit-66 {
   width: 66%;
 }
 
 //input
-.reg-inp{
+.reg-inp {
   width: 100%;
   border: none;
   box-sizing: border-box;
@@ -39,16 +61,17 @@
   font-size: $normal-size;
 }
 
-textarea{
+textarea {
   width: 100%;
   border: none;
   padding: 8px 10px;
   font-size: $normal-size;
   box-sizing: border-box;
+  height: 76px;
 }
 
 //button
-.form-btn{
+.form-btn {
   width: 100%;
   margin-bottom: .5rem;
   border: none;
@@ -59,22 +82,34 @@ textarea{
   color: #fff;
   font-family: $PT-Sans;
 
-  &:last-child{
+  @include respondTo(small) {
+    margin-bottom: 1rem;
+  }
+
+  &:last-child {
     margin-bottom: 0;
   }
 
   &_attach {
     background: $disabled;
+
+    &:hover {
+      background: #c8c8c8;
+    }
   }
 
-  &_send{
+  &_send {
     background: #2cb3d5;
     font-family: $PT-Sans-bold;
     font-size: $normal-size + 1;
+
+    &:hover {
+      background: #38bcdd;
+    }
   }
 }
 
-.icon-search{
+.icon-search {
   position: absolute;
   right: 10px;
   top: 5px;

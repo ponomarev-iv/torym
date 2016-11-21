@@ -5,6 +5,10 @@
   animation: opacity-block .45s ease-in-out 1;
 }
 
+%view-block{
+  animation: view-block .3s ease-in-out 1;
+}
+
 @keyframes opacity-block {
   from{
     opacity: 0;
@@ -13,3 +17,15 @@
     opacity: 1;
   }
 }
+
+@keyframes view-block {
+  from{
+    transform: translateX(-100%);
+    opacity: 0;
+  }
+  to{
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
