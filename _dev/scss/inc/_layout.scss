@@ -1,8 +1,21 @@
 /**
  * Created by Pompo on 14.11.2016.
  */
+
+html{
+  font-size: 10px;
+}
+
 body{
   font-family: 'PTSans', sans-serif;
+}
+
+a{
+  transition: color ease 350ms;
+
+  &:hover{
+    color: $action-color;
+  }
 }
 
 p{

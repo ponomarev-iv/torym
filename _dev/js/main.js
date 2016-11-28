@@ -79,6 +79,18 @@ function switchMap(){
     })
 }
 
+function magnificPopup(){
+    $('.img-block').magnificPopup({
+        delegate: 'a', // child items selector, by clicking on it popup will open
+        type: 'image',
+        gallery: {
+            enabled: true,
+            navigateByImgClick: true,
+            preload: [0,1] // Will preload 0 - before current, and 1 after the current image
+        }
+    });
+}
+
 $(window).resize(function(){
     swiperPartner();
 });
@@ -86,6 +98,7 @@ $(window).resize(function(){
 $(window).resize();
 
 $(document).ready(function(){
+    magnificPopup();
     swiperInit();
     swiperPartner();
     switchMap();

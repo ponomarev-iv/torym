@@ -1,6 +1,33 @@
 /**
  * Created by Pompo on 14.11.2016.
  */
+
+//breadcrumbs
+.breadcrumbs{
+  margin-bottom: 2.4em;
+  font-size: 1.3rem;
+
+  &__item{
+    position: relative;
+    padding-right: 1.25em;
+    color: $main-color;
+
+    &:after{
+      content: "";
+      position: absolute;
+      right: 2px;
+      bottom: 7px;
+      height: 1px;
+      width: 8px;
+      background: $main-color;
+    }
+  }
+
+  &__this{
+    color: $sec-color;
+  }
+}
+
 .main-nav{
   display: flex;
   list-style: none;
@@ -24,7 +51,8 @@
       transition: all ease-out 300ms;
     }
 
-    &:hover{
+    &:hover,
+    &.is-active{
 
       &:after{
         left: 0;
@@ -33,6 +61,14 @@
       & .main-nav__link{
         color: $action-color;
       }
+    }
+
+    &.is-active{
+      & .main-nav__link{
+        text-transform: uppercase;
+        font-weight: 600;
+      }
+
     }
   }
 
