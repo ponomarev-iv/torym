@@ -92,15 +92,27 @@ function magnificPopup(){
 }
 
 function secondMenu() {
-    $('.js-menu').mouseover(
-        function () {// навели курсор на объект
-            $('.second-nav').addClass('is-active');
+    
+    var SecNav = $('.second-nav'),
+        menuLink = $('.js-menu');
+
+    $(menuLink).mouseover(
+        function () {// навели курсор на ссылку с меню
+            $(this).addClass('hover-menu');
+            $(SecNav).addClass('is-active');
         });
-    $('.second-nav').mouseout(
+    $(menuLink).mouseout(
         function () {
-            $('.second-nav').removeClass('is-active');
-        });
-};
+            $(this).removeClass('hover-menu');
+            if (SecNav.is(':hover')) {
+                $(SecNav).addClass('is-active');
+            }
+            else{
+                $(SecNav).removeClass('is-active');
+            }
+        }
+    );
+}
 
 $(window).resize(function(){
     swiperPartner();
