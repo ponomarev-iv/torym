@@ -7,10 +7,14 @@
   box-sizing: border-box;
   padding: 20px 0 0;
 
-  @extend %animation-block;
+  //@extend %animation-block;
 
   @include respondTo(small){
     padding-bottom: 20px;
+  }
+
+  &__wrap{
+    position: relative;
   }
 
   &__logo{
@@ -18,6 +22,7 @@
     color: $sec-color;
     padding: 10px 0 16px;
     font-family: $PT-Sans;
+    display: block;
   }
 
   &__contact{

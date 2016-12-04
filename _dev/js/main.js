@@ -91,6 +91,17 @@ function magnificPopup(){
     });
 }
 
+function secondMenu() {
+    $('.js-menu').mouseover(
+        function () {// навели курсор на объект
+            $('.second-nav').addClass('is-active');
+        });
+    $('.second-nav').mouseout(
+        function () {
+            $('.second-nav').removeClass('is-active');
+        });
+};
+
 $(window).resize(function(){
     swiperPartner();
 });
@@ -98,6 +109,7 @@ $(window).resize(function(){
 $(window).resize();
 
 $(document).ready(function(){
+    secondMenu();
     magnificPopup();
     swiperInit();
     swiperPartner();
