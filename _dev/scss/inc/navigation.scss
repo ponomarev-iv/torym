@@ -85,6 +85,11 @@
     &:hover{
       text-decoration: none;
     }
+
+    &:focus{
+      color: $sec-color;
+      text-decoration: none;
+    }
   }
 }
 

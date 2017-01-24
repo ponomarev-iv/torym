@@ -17,6 +17,10 @@ a{
   &:hover{
     color: $action-color;
   }
+
+  &:visited{
+    text-decoration: none;
+  }
 }
 
 p{
