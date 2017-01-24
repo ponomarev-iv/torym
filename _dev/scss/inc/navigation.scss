@@ -90,16 +90,19 @@
 
 //second nav
 .second-nav{
-  position: absolute;
+  position: fixed;
   background: $bg-grey;
   padding: 3rem 0;
   width: 100%;
-  opacity: 0;
+  display: none;
   transition: opacity ease 300ms;
   z-index: 10;
+  left: 0;
+
+  @extend %animation-block;
 
   &.is-active{
-    opacity: 1;
+    display: block;
   }
 
   &__col{

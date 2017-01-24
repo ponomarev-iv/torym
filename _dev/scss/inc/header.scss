@@ -6,6 +6,11 @@
   //height: 80px;
   box-sizing: border-box;
   padding: 20px 0 0;
+  position: fixed;
+  width: 100%;
+  top:0;
+  left: 0;
+  z-index: 10;
 
   //@extend %animation-block;
 
@@ -22,7 +27,12 @@
     color: $sec-color;
     padding: 10px 0 16px;
     font-family: $PT-Sans;
-    display: block;
+    display: inline-block;
+
+    &:hover{
+      text-decoration: none;
+      color: $sec-color;
+    }
   }
 
   &__contact{
