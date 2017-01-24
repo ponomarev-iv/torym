@@ -1,6 +1,7 @@
 /**
  * Created by Pompo on 14.11.2016.
  */
+
 @font-face {
   font-family: "PTSans";
   src: url("../fonts/PTSansRegular/PTSansRegular.eot");
@@ -33,20 +34,16 @@
 
 @font-face {
   font-family: "Bitter";
-  src: url("../fonts/BitterRegular/BitterRegular.eot");
-  src: url("../fonts/BitterRegular/BitterRegular.eot?#iefix")format("embedded-opentype"),
-  url("../fonts/BitterRegular/BitterRegular.woff") format("woff"),
-  url("../fonts/BitterRegular/BitterRegular.ttf") format("truetype");
+  src: url("../fonts/BitterRegular/bitter.woff2") format("woff2"),
+  url("../fonts/BitterRegular/bitter.ttf") format("truetype");
   font-style: normal;
   font-weight: normal;
 }
 
 @font-face {
   font-family: "BitterBold";
-  src: url("../fonts/BitterBold/BitterBold.eot");
-  src: url("../fonts/BitterBold/BitterBold.eot?#iefix")format("embedded-opentype"),
-  url("../fonts/BitterBold/BitterBold.woff") format("woff"),
-  url("../fonts/BitterBold/BitterBold.ttf") format("truetype");
+  src: url("../fonts/BitterBold/bitterbold.woff2") format("woff2"),
+  url("../fonts/BitterBold/bitterbold.ttf") format("truetype");
   font-style: normal;
   font-weight: normal;
 }
