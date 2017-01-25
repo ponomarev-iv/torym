@@ -19,7 +19,7 @@
                                 <li class="main-nav__item"><a href="/about.html" class="main-nav__link">Компания</a>
                                 </li>
                                 <li class="main-nav__item js-menu"><a href="/catalog-boards.html"
-                                                              class="main-nav__link ">Каталог</a>
+                                                                      class="main-nav__link ">Каталог</a>
                                     <div class="second-nav">
                                         <div class="container">
                                             <div class="row">
@@ -248,31 +248,32 @@
 
     //= inc/main-form.inc.html
 
-    <section class="map map_office js-map">
-        <div class="container">
-            <div class="row">
-                <div class="col-lg-3 col-md-4 col-sm-4 col-xs-6 reset-small">
-                    <div class="map-content">
-                        <span class="map-content__title is-active js-map-switch" data-href="#office">Офис</span>
-                        <span class="map-content__title js-map-switch" data-href="#sklad">Склад</span>
+    <section class="map is-active" id="js-office">
 
-                        <p id="office" class="is-active js-tab">
-                            Пермь<br>
-                            <span class="phone-bold">+7 (342) 224-28-58</span><br>
-                            ул. В. Каменского, 10А<br>
-                            zakaz@torum-perm.ru
-                        </p>
+        <div class="map-content">
+            <span class="map-content__title is-active ">Офис</span>
+            <span class="map-content__title js-map-switch">Склад</span>
+            <p>
+                Пермь<br>
+                <span class="phone-bold">+7 (342) 224-28-58</span><br>
+                ул. В. Каменского, 10А<br>
+                zakaz@torum-perm.ru
+            </p>
+        </div>
 
-                        <p id="sklad" class="js-tab">
-                            Пермь (Закамск)<br>
-                            <span class="phone-bold">+7 (342) 224-28-58</span><br>
-                            ул.&nbsp;Правобережная,&nbsp;18<br>
-                            zakaz@torum-perm.ru
-                        </p>
-                    </div>
+    </section>
 
-                </div>
-            </div>
+    <section class="map" id="js-sklad">
+
+        <div class="map-content">
+            <span class="map-content__title js-map-switch">Офис</span>
+            <span class="map-content__title is-active">Склад</span>
+            <p>
+                Пермь (Закамск)<br>
+                <span class="phone-bold">+7 (342) 224-28-58</span><br>
+                ул.&nbsp;Правобережная,&nbsp;18<br>
+                zakaz@torum-perm.ru
+            </p>
         </div>
     </section>
 

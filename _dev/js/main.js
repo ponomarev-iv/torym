@@ -61,21 +61,56 @@ function swiperPartner() {
     }
 }
 
+function yandexMap() {
+    ymaps.ready(init);
+    ymaps.ready(initTwo);
+    var myMap,
+        myPlacemark;
+
+    function init(){
+        myMap = new ymaps.Map("js-office", {
+            center: [57.99921057, 56.17411600],
+            zoom: 16
+        });
+
+        myPlacemark = new ymaps.Placemark([57.99921057, 56.17411600], {
+            hintContent: 'ТОРУМ',
+            balloonContent: 'Офис компании'
+        });
+
+        myMap.geoObjects.add(myPlacemark);
+    }
+
+    function initTwo(){
+        myMap = new ymaps.Map("js-sklad", {
+            center: [57.99467318, 55.92399294],
+            zoom: 16
+        });
+
+        myPlacemark = new ymaps.Placemark([57.99467318, 55.92399294], {
+            hintContent: 'ТОРУМ',
+            balloonContent: 'Склад компании'
+        });
+
+        myMap.geoObjects.add(myPlacemark);
+    }
+}
+
 function switchMap() {
     var switchLink = $('.js-map-switch'),
-        switchTab = $('.js-tab');
+        officeMap = $('#js-office'),
+        skladMap = $('#js-sklad');
+
 
     $(switchLink).on('click', function () {
-        if ($(this).hasClass('is-active')) {
-            return false;
-        } else {
-            $(switchTab).removeClass('is-active');
-            $(switchLink).removeClass('is-active');
-            $(this).addClass('is-active');
-            var tabLink = $(this).data('href');
-            $(tabLink).addClass('is-active');
-            $('.js-map').toggleClass('map_sklad');
+        if (officeMap.hasClass('is-active')){
+            officeMap.removeClass('is-active');
+            skladMap.addClass('is-active');
+        }else if(skladMap.hasClass('is-active')){
+            skladMap.removeClass('is-active');
+            officeMap.addClass('is-active');
         }
+        else return false;
     })
 }
 
@@ -118,6 +153,7 @@ $(document).ready(function () {
     magnificPopup();
     swiperInit();
     swiperPartner();
+    yandexMap();
     switchMap();
 });
 
