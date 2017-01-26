@@ -29,6 +29,11 @@
     font-family: $PT-Sans;
     display: inline-block;
 
+    @include respondTo(small){
+      display: block;
+      text-align: center;
+    }
+
     &:hover{
       text-decoration: none;
       color: $sec-color;
@@ -42,7 +47,7 @@
     font-size: $normal-size;
 
     @include respondTo(small){
-      text-align: left;
+      text-align: center;
     }
 
     & > span{
@@ -59,4 +64,8 @@
   background: url('../img/logo.png') no-repeat 0 50% / cover;
   width: 156px;
   height: 17px;
+
+  @include respondTo(small){
+    margin: 0 auto;
+  }
 }

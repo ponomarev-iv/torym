@@ -9,6 +9,10 @@ html{
 body{
   font-family: 'PTSans', sans-serif;
   padding-top: 80px;
+
+  @include respondTo(small){
+    padding-top: 140px;
+  }
 }
 
 a{

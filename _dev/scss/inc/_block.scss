@@ -291,3 +291,19 @@
         text-align: center;
     }
 }
+
+.rekvizit{
+    font-size: 1.6rem;
+    margin: 0;
+
+    & span{
+        white-space: nowrap;
+        min-width: 95px;
+        display: inline-block;
+
+        @include respondTo(small){
+            font-weight: 600;
+            display: block;
+        }
+    }
+}
