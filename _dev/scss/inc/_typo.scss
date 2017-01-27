@@ -16,3 +16,23 @@ $Bitter-bold: "BitterBold", sans-serif;
 h1, h2, h3, h4, h5, h6{
     font-weight: normal;
 }
+
+a{
+    transition: color ease 350ms;
+    outline: none !important;
+
+    &:hover{
+        color: $action-color;
+    }
+
+    &:focus{
+        text-decoration: none;
+        color: $action-color;
+    }
+}
+
+p{
+    font-family: $PT-Sans;
+    font-size: $normal-size;
+    margin: 0 0 1.3em;
+}

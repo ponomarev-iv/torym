@@ -14,21 +14,3 @@ body{
     padding-top: 140px;
   }
 }
-
-a{
-  transition: color ease 350ms;
-
-  &:hover{
-    color: $action-color;
-  }
-
-  &:visited{
-    text-decoration: none;
-  }
-}
-
-p{
-  font-family: $PT-Sans;
-  font-size: $normal-size;
-  margin: 0 0 1.3em;
-}

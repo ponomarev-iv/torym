@@ -62,37 +62,39 @@ function swiperPartner() {
 }
 
 function yandexMap() {
-    ymaps.ready(init);
-    ymaps.ready(initTwo);
-    var myMap,
-        myPlacemark;
+    if($('#js-office').length){
+        ymaps.ready(init);
+        ymaps.ready(initTwo);
+        var myMap,
+            myPlacemark;
 
-    function init(){
-        myMap = new ymaps.Map("js-office", {
-            center: [57.99921057, 56.17411600],
-            zoom: 16
-        });
+        function init() {
+            myMap = new ymaps.Map("js-office", {
+                center: [57.99921057, 56.17411600],
+                zoom: 16
+            });
 
-        myPlacemark = new ymaps.Placemark([57.99921057, 56.17411600], {
-            hintContent: 'ТОРУМ',
-            balloonContent: 'Офис компании'
-        });
+            myPlacemark = new ymaps.Placemark([57.99921057, 56.17411600], {
+                hintContent: 'ТОРУМ',
+                balloonContent: 'Офис компании'
+            });
 
-        myMap.geoObjects.add(myPlacemark);
-    }
+            myMap.geoObjects.add(myPlacemark);
+        }
 
-    function initTwo(){
-        myMap = new ymaps.Map("js-sklad", {
-            center: [57.99467318, 55.92399294],
-            zoom: 16
-        });
+        function initTwo() {
+            myMap = new ymaps.Map("js-sklad", {
+                center: [57.99467318, 55.92399294],
+                zoom: 16
+            });
 
-        myPlacemark = new ymaps.Placemark([57.99467318, 55.92399294], {
-            hintContent: 'ТОРУМ',
-            balloonContent: 'Склад компании'
-        });
+            myPlacemark = new ymaps.Placemark([57.99467318, 55.92399294], {
+                hintContent: 'ТОРУМ',
+                balloonContent: 'Склад компании'
+            });
 
-        myMap.geoObjects.add(myPlacemark);
+            myMap.geoObjects.add(myPlacemark);
+        }
     }
 }
 
@@ -103,10 +105,10 @@ function switchMap() {
 
 
     $(switchLink).on('click', function () {
-        if (officeMap.hasClass('is-active')){
+        if (officeMap.hasClass('is-active')) {
             officeMap.removeClass('is-active');
             skladMap.addClass('is-active');
-        }else if(skladMap.hasClass('is-active')){
+        } else if (skladMap.hasClass('is-active')) {
             skladMap.removeClass('is-active');
             officeMap.addClass('is-active');
         }
