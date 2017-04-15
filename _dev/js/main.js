@@ -7,7 +7,9 @@ function swiperInit() {
         var mySwiper = new Swiper('#hero-banner', {
             pagination: '.swiper-pagination',
             paginationClickable: true,
-            autoplay: 2500
+            autoplay: 7000,
+            speed: 400,
+            loop: true
         });
     } else {
         return false;
@@ -71,13 +73,25 @@ function yandexMap() {
         function init() {
             myMap = new ymaps.Map("js-office", {
                 center: [57.99921057, 56.17411600],
-                zoom: 16
+                zoom: 17,
+                controls: []
             });
 
-            myPlacemark = new ymaps.Placemark([57.99921057, 56.17411600], {
+            myPlacemark = new ymaps.Placemark([57.99916057, 56.17455000], {
                 hintContent: 'ТОРУМ',
                 balloonContent: 'Офис компании'
-            });
+            }, {
+                    // Опции.
+                    // Необходимо указать данный тип макета.
+                    iconLayout: 'default#image',
+                    // Своё изображение иконки метки.
+                    iconImageHref: '../img/arrow-map.png',
+                    // Размеры метки.
+                    iconImageSize: [53, 42],
+                    // Смещение левого верхнего угла иконки относительно
+                    // её "ножки" (точки привязки).
+                    iconImageOffset: [-5, -38]
+                });
 
             myMap.geoObjects.add(myPlacemark);
         }
@@ -85,12 +99,24 @@ function yandexMap() {
         function initTwo() {
             myMap = new ymaps.Map("js-sklad", {
                 center: [57.99467318, 55.92399294],
-                zoom: 16
+                zoom: 17,
+                controls: []
             });
 
-            myPlacemark = new ymaps.Placemark([57.99467318, 55.92399294], {
+            myPlacemark = new ymaps.Placemark([57.99469318, 55.92339294], {
                 hintContent: 'ТОРУМ',
                 balloonContent: 'Склад компании'
+            }, {
+                // Опции.
+                // Необходимо указать данный тип макета.
+                iconLayout: 'default#image',
+                    // Своё изображение иконки метки.
+                    iconImageHref: '../img/arrow-map-two.png',
+                    // Размеры метки.
+                    iconImageSize: [53, 42],
+                    // Смещение левого верхнего угла иконки относительно
+                    // её "ножки" (точки привязки).
+                    iconImageOffset: [-5, -38]
             });
 
             myMap.geoObjects.add(myPlacemark);
