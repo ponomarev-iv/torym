@@ -23,8 +23,9 @@
   }
 
   &__logo{
-    font-size: $xs-size;
-    color: $sec-color;
+    //font-size: $xs-size;
+    font-size: 11.73px;
+    color: #646464;
     padding: 10px 0 16px;
     font-family: $PT-Sans;
     display: inline-block;
@@ -32,6 +33,7 @@
     @include respondTo(small){
       display: block;
       text-align: center;
+      padding-top: 11px;
     }
 
     &:hover{
@@ -45,17 +47,24 @@
     color: #fff;
     font-family: $Bitter-bold;
     font-size: $normal-size;
+    margin-top: -7px;
 
     @include respondTo(small){
       text-align: center;
+      margin-top: 0;
     }
 
-    & > span{
+    & > a{
       color: $sec-color;
       font-family: $PT-Sans;
       font-size: $xs-size;
       line-height: 1.4;
       display: block;
+      text-decoration: none;
+
+      &:hover{
+        text-decoration: underline;
+      }
     }
   }
 }

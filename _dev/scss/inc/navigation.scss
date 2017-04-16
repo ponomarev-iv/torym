@@ -110,8 +110,23 @@
   }
 
   &__col{
-    padding: 0 3rem;
+    padding: 0 10px;
     height: 100%;
+
+    &_sale{
+
+      & .second-nav__title{
+        color: $sale-color;
+      }
+
+      & .second-nav__link:hover{
+        color: $sale-color;
+      }
+    }
+
+    &_first{
+      padding-left: 40px;
+    }
 
     &_brd{
       border-left: 1px solid #c1c1c1;
@@ -152,9 +167,11 @@
     font-family: $PT-Sans;
     color: #4b4b4b;
     text-decoration: none;
+    transition: all ease .1s;
 
     &:hover{
       color: $action-color;
+      font-family: $PT-Sans-bold;
       text-decoration: none;
     }
   }

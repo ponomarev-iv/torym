@@ -1,7 +1,11 @@
 .main-footer{
     background: $main-color;
     color: $sec-color;
-    padding: 30px 0 40px;
+    padding: 25px 0 30px;
+
+    & .header__logo{
+        padding-top: 0;
+    }
 
     @include respondTo(small){
         padding: 20px 0;
@@ -19,11 +23,11 @@
 
         & a {
             text-decoration: none;
-            color: $sec-color;
+            color: #969696;
             transition: color ease 300ms;
             font-family: $PT-Sans;
             font-size: $normal-size;
-            line-height: 1;
+            line-height: 1.125;
 
             &:hover{
                 text-decoration: none;
@@ -78,4 +82,5 @@
     display: block;
     white-space: nowrap;
     padding-top: 5px;
+    color: #646464;
 }
