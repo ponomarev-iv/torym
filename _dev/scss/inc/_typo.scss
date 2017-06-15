@@ -35,4 +35,8 @@ p{
     font-family: $PT-Sans;
     font-size: $normal-size;
     margin: 0 0 1.3em;
+
+    &:last-of-type{
+        margin-bottom: 0;
+    }
 }

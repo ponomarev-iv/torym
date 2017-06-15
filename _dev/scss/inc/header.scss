@@ -32,7 +32,6 @@
 
     @include respondTo(small){
       display: block;
-      text-align: center;
       padding-top: 11px;
     }
 
@@ -50,7 +49,7 @@
     margin-top: -7px;
 
     @include respondTo(small){
-      text-align: center;
+      text-align: left;
       margin-top: 0;
     }
 
@@ -73,8 +72,4 @@
   background: url('../img/logo.png') no-repeat 0 50% / cover;
   width: 156px;
   height: 17px;
-
-  @include respondTo(small){
-    margin: 0 auto;
-  }
 }

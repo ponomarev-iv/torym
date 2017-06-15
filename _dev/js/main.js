@@ -11,8 +11,6 @@ function swiperInit() {
             speed: 400,
             loop: true
         });
-    } else {
-        return false;
     }
 
     if ($('#equipment-slider').length) {
@@ -34,6 +32,13 @@ function swiperInit() {
                     slidesPerView: 1
                 }
             }
+        });
+    }
+
+    if ($('#js-feedback').length) {
+        var mySwiper = new Swiper('#js-feedback', {
+            nextButton: '.swiper-button-next',
+            prevButton: '.swiper-button-prev'
         });
     } else {
         return false;
@@ -170,11 +175,10 @@ function secondMenu() {
             })
 }
 
-$(window).resize(function () {
+$(window).resize(function(){
     swiperPartner();
 });
 
-$(window).resize();
 
 $(document).ready(function () {
     secondMenu();
