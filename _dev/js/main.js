@@ -16,6 +16,7 @@ function swiperInit() {
     if ($('#equipment-slider').length) {
         var mySwiper = new Swiper('#equipment-slider', {
             slidesPerView: 4,
+            loop: true,
             nextButton: '.swiper-button-next',
             prevButton: '.swiper-button-prev',
             spaceBetween: 30,
@@ -82,7 +83,7 @@ function yandexMap() {
                 controls: []
             });
 
-            myPlacemark = new ymaps.Placemark([57.99916057, 56.17455000], {
+            myPlacemark = new ymaps.Placemark([57.99951057, 56.17403000], {
                 hintContent: 'ТОРУМ',
                 balloonContent: 'Офис компании'
             }, {
@@ -90,9 +91,9 @@ function yandexMap() {
                     // Необходимо указать данный тип макета.
                     iconLayout: 'default#image',
                     // Своё изображение иконки метки.
-                    iconImageHref: '../img/arrow-map.png',
+                    iconImageHref: '../img/placeholder.png',
                     // Размеры метки.
-                    iconImageSize: [53, 42],
+                    iconImageSize: [45, 62],
                     // Смещение левого верхнего угла иконки относительно
                     // её "ножки" (точки привязки).
                     iconImageOffset: [-5, -38]
@@ -108,7 +109,7 @@ function yandexMap() {
                 controls: []
             });
 
-            myPlacemark = new ymaps.Placemark([57.99469318, 55.92339294], {
+            myPlacemark = new ymaps.Placemark([57.99489318, 55.92399294], {
                 hintContent: 'ТОРУМ',
                 balloonContent: 'Склад компании'
             }, {
@@ -116,9 +117,9 @@ function yandexMap() {
                 // Необходимо указать данный тип макета.
                 iconLayout: 'default#image',
                     // Своё изображение иконки метки.
-                    iconImageHref: '../img/arrow-map-two.png',
+                    iconImageHref: '../img/placeholder.png',
                     // Размеры метки.
-                    iconImageSize: [53, 42],
+                    iconImageSize: [45, 62],
                     // Смещение левого верхнего угла иконки относительно
                     // её "ножки" (точки привязки).
                     iconImageOffset: [-5, -38]

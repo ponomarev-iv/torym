@@ -22,4 +22,8 @@
 
 .icon-search {
     @include sprite($i-search);
+
+    &:hover{
+        @include sprite($i-search-a);
+    }
 }
