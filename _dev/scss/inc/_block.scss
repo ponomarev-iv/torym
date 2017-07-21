@@ -8,10 +8,6 @@
         padding: 40px 0;
     }
 
-    &_bg-gray{
-        background: $bg-grey;
-    }
-
     &__title{
         margin: 0 0 2em;
         font-size: $xs-size*2 + 1;
@@ -22,6 +18,18 @@
         @include respondTo(small){
             font-size: $xl-size;
         }
+
+        &_no-mrg{
+            margin-bottom: .5em;
+        }
+    }
+
+    &_bg-gray{
+        background: $bg-grey;
+    }
+
+    &_sm{
+        padding: 30px 0 70px;
     }
 }
 
@@ -87,6 +95,7 @@
         text-align: center;
         color: $main-color;
         margin-bottom: 5rem;
+        display: block;
 
         &-txt{
             font-size: $normal-size;
@@ -137,6 +146,11 @@
 
     &_partner{
         background: url('../img/bg-partner.jpg') no-repeat scroll transparent 50% 50% / cover;
+
+        & .swiper-button-next,
+        & .swiper-button-prev{
+            top: 50%;
+        }
     }
 
     &__wrap{

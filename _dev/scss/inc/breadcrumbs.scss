@@ -1,0 +1,28 @@
+/**
+ * Created by Pompo on 22.07.2017.
+ */
+//breadcrumbs
+.breadcrumbs{
+  margin-bottom: 2.4em;
+  font-size: 1.3rem;
+
+  &__link{
+    position: relative;
+    padding-right: 1.25em;
+    color: $main-color;
+
+    &:after{
+      content: "";
+      position: absolute;
+      right: 2px;
+      bottom: 7px;
+      height: 1px;
+      width: 8px;
+      background: $main-color;
+    }
+  }
+
+  &__this{
+    color: $sec-color;
+  }
+}

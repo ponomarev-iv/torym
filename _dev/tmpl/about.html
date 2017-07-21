@@ -1,14 +1,12 @@
 //= inc/header.inc.html
 <body >
 <noindex>
+    <!-- START header -->
     <header class="header">
         <div class="container">
             <div class="row">
                 <div class="col-md-3 col-sm-6 col-xs-6 reset-small">
-                    <a class="header__logo" href="/">
-                        <div class="logo"></div>
-                        электротехническая компания
-                    </a>
+                    //= inc/header/logo.inc.html
                 </div>
                 <div class="col-md-6 hide-tablet">
                     <nav>
@@ -23,29 +21,26 @@
                     </nav>
                 </div>
                 <div class="col-md-3 col-sm-6 col-xs-6 reset-small">
-                    <div class="header__contact">
-                        <a href="mailto:zakaz@torum-perm.ru" class="mail-link">
-                            zakaz@torum-perm.ru
-                        </a>
-                        +7 (342) 224 28 58
-                    </div>
+                    //= inc/header/contact.inc.html
                 </div>
             </div>
         </div>
     </header>
+    <!-- END header -->
 
-    <section class="c-section">
+    <!-- START team -->
+    <section class="c-section c-section_sm">
         <div class="container">
             <div class="row">
                 <div class="col-md-12">
-                    <!--breadcrumbs-->
+                    <!-- START breadcrumbs -->
                     <section class="breadcrumbs">
                         <a href="/" class="breadcrumbs__link">На главную</a>
                         <span class="breadcrumbs__this">Компания</span>
                     </section>
+                    <!-- END breadcrumbs -->
                 </div>
             </div>
-
             <div class="row c-block">
                 <div class="col-md-3">
                     <h3 class="c-block__title">Эффективная команда</h3>
@@ -65,7 +60,9 @@
             </div>
         </div>
     </section>
+    <!-- END team -->
 
+    <!-- START garant -->
     <section class="c-section c-section_bg-gray">
         <div class="container">
             <div class="row c-block">
@@ -85,6 +82,7 @@
                         Сотрудники компании имеют большой опыт работы в&nbsp;сфере продаж кабельно-проводниковой продукции, а&nbsp;также работы с&nbsp;проектными документами и&nbsp;проектными институтами, что позволяет своевременно производить замену устаревшего или снятого с&nbsp;производства оборудования.
                     </p>
                     <div class="img-block">
+                        <a href="img/sertifikat-5_big.jpg"><img src="img/sertifikat-5.png" alt="Сертификат" width="116"></a>
                         <a href="img/sertifikat-1_big.jpg"><img src="img/sertifikat-1.png" alt="Сертификат" width="116"></a>
                         <a href="img/sertifikat-2_big.jpg"><img src="img/sertifikat-2.png" alt="Сертификат" width="116"></a>
                         <a href="img/sertifikat-3_big.jpg"><img src="img/sertifikat-3.png" alt="Сертификат" width="116"></a>
@@ -94,8 +92,9 @@
             </div>
         </div>
     </section>
+    <!-- END garant -->
 
-
+    <!-- START partner -->
     <section class="production_partner">
         <div class="container">
             <div class="row">
@@ -168,7 +167,9 @@
             </div>
         </div>
     </section>
+    <!-- END partner -->
 
+    <!-- START delivery -->
     <section class="c-section">
         <div class="container">
             <div class="row c-block">
@@ -212,5 +213,6 @@
             </div>
         </div>
     </section>
+    <!-- END delivery -->
 
     //= inc/footer.inc.html

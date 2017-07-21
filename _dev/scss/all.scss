@@ -1,6 +1,10 @@
 /**
  * Created by Pompo on 14.11.2016.
  */
+//assets
+@import "inc/assets/bootstrap-grid";
+@import "inc/assets/magnific-popup";
+@import "inc/assets/swiper";
 
 @import "inc/fonts";
 @import "inc/color";
@@ -10,12 +14,15 @@
 @import "inc/layout";
 @import "inc/header";
 @import "inc/navigation";
+@import "inc/breadcrumbs";
+@import "inc/extra-menu";
 @import "inc/hero-banner";
 @import "inc/footer";
 @import "inc/block";
 @import "inc/form";
 @import "inc/icon";
 @import "inc/table";
+
 
 @import "inc/helpers";
 
