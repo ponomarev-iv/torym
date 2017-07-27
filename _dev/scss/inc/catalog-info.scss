@@ -1,0 +1,71 @@
+/**
+ * Created by Pompo on 27.07.2017.
+ */
+.catalog-info{
+
+  &__wrap{
+
+    &:after{
+      clear: both;
+      content: '';
+      display: table;
+    }
+  }
+
+  &__img{
+    padding-right: 20px;
+    float: left;
+    width: 30%;
+  }
+  
+  &__txt{
+    float: left;
+    width: 70%;
+
+    &_w100{
+      width: 100%;
+      float: none;
+    }
+  }
+
+  &__foto{
+    display: flex;
+    padding-top: 30px;
+
+    & a:after{
+      display: none;
+    }
+  }
+
+  &__title{
+    font-family: $PT-Sans-bold;
+    font-size: $middle-size;
+    color: $main-color;
+    margin-top: 2em;
+  }
+
+  &__list{
+    margin: 0 0 20px;
+    padding: 0;
+    list-style: none;
+
+    & li{
+      color: $main-color;
+      font-size: $normal-size;
+      position: relative;
+      padding-left: 12px;
+
+      &:before{
+        position: absolute;
+        content: '';
+        border-radius: 50%;
+        width: 4px;
+        height: 4px;
+        left: 0;
+        top: 11px;
+        background-color: $main-color;
+      }
+    }
+  }
+
+}

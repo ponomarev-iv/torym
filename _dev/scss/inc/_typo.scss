@@ -10,6 +10,7 @@ $xl-size: 22px;
 
 $PT-Sans: "PTSans", sans-serif;
 $PT-Sans-bold: "PTSansBold", sans-serif;
+$PT-Sans-italic: "PTSansItalic", sans-serif;
 $Bitter: "Bitter", sans-serif;
 $Bitter-bold: "BitterBold", sans-serif;
 
@@ -39,4 +40,9 @@ p{
     &:last-of-type{
         margin-bottom: 0;
     }
+}
+
+.txt-gray{
+    color: $sec-color;
+    font-family: $PT-Sans-italic;
 }
