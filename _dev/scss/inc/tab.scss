@@ -1,0 +1,35 @@
+.tab{
+    margin: 20px 0 25px;
+
+    &__header{
+        display: flex;
+        justify-content: space-between;
+        margin-bottom: 25px;
+    }
+
+    &__title{
+        width: 33%;
+        text-align: center;
+        background-color: #cdebf0;
+        height: 50px;
+        padding: 1.6rem;
+        line-height: 1;
+        box-sizing: border-box;
+        font-size: 1.8rem;
+        color: $black;
+        cursor: pointer;
+
+        &.current{
+            background-color: #a0d7e6;
+            font-family: $PT-Sans-bold;
+        }
+    }
+
+    &__content{
+        display: none;
+
+        &.is-active{
+            display: block;
+        }
+    }
+}

@@ -201,6 +201,28 @@ else return false;
 
 }
 
+function initTab(){
+    var tabLink = $('.js-tab'),
+        tabContent = $('.js-content')
+
+    if(tabLink.length){
+        tabLink.click(function(){
+            var idContent = $(this).attr('data-id');
+
+            if($(this).hasClass('current')){
+                return false;
+            }
+            else{
+                $(tabLink).removeClass('current');
+                $(tabContent).removeClass('is-active');
+                $(this).addClass('current');
+                $(idContent).addClass('is-active');
+            }
+        })
+    }
+    else return false
+}
+
 $(window).resize(function(){
     swiperPartner();
 });
@@ -214,6 +236,7 @@ $(document).ready(function () {
     yandexMap();
     switchMap();
     emulateAsideMenu();
+    initTab();
 });
 
 

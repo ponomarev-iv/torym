@@ -98,6 +98,20 @@
     }
   }
 
+  &__sec-list{
+    margin: 0;
+    padding: 0;
+    list-style: none;
+
+    & li{
+      padding: 0;
+
+      &:before{
+        display: none;
+      }
+    }
+  }
+
   &__accent{
     background-color: #a0d7e6;
     padding: 20px 20px 20px 115px;
@@ -167,6 +181,11 @@
         width: 16.6%;
       }
     }
+  }
+
+  //для картинок в строку с отступами используется в кабелях
+  &__pic{
+    margin: 20px 0 10px;
   }
 
 }
