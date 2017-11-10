@@ -5,6 +5,14 @@
         display: flex;
         justify-content: space-between;
         margin-bottom: 25px;
+
+        &_sm{
+            justify-content: flex-start;
+
+            & .tab__title{
+                margin-right: 5px;
+            }
+        }
     }
 
     &__title{

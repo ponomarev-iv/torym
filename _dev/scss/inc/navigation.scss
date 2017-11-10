@@ -83,7 +83,7 @@
   }
 
   &__col{
-    padding: 0 10px;
+    padding: 0 20px;
     height: 100%;
 
     &_sale{
@@ -161,6 +161,10 @@
     font-size: 16px;
     font-family: $PT-Sans-bold;
     line-height: 1.2;
+
+    &_special{
+      color: $sale-color;
+    }
   }
 }
 
