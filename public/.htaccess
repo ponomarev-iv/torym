@@ -1,1 +1,21 @@
 AddDefaultCharset UTF-8
+
+ErrorDocument 404 /404-error.html
+
+Options +FollowSymLinks
+  RewriteEngine On
+
+  Redirect 301 /shchity-upravleniya-shchu http://torum-perm.ru/schity-upravleniya.html
+  Redirect 301 /glavnye-raspredelitelnye-shchity-grshch http://torum-perm.ru/glavnye-raspredelitelnye-schity.html
+  Redirect 301 /shchity-silovye-shchs http://torum-perm.ru/schity-silovye.html
+  Redirect 301 /shchity-osveshcheniya-shcho http://torum-perm.ru/schity-osvescheniya.html
+  Redirect 301 /shchity-avtomaticheskogo-vvoda-rezervnogo-pitaniya-avr http://torum-perm.ru/shchity-avtomaticheskogo-vvoda-rezervnogo-pitaniya.html
+  Redirect 301 /vvodno-raspredelitelnye-ustroystva-vru1 http://torum-perm.ru/vvodno-raspredelitelnye-ustroystva.html
+  Redirect 301 /production http://torum-perm.ru/catalog-boards.html
+  Redirect 301 /specpredlozhenie/shkaf-ksho-v-nalichii http://torum-perm.ru/shkaf-ksho.html
+  Redirect 301 /company/team http://torum-perm.ru/about.html
+  Redirect 301 /contacts http://torum-perm.ru/contact.html
+  Redirect 301 /specpredlozhenie http://torum-perm.ru/povorotnaya-kamera-bosch.html
+  Redirect 301 /company/partners http://torum-perm.ru/about.html
+  Redirect 301 /company/partners http://torum-perm.ru/
+  Redirect 301 /shipping http://torum-perm.ru/about.html

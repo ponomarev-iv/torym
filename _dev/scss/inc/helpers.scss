@@ -270,3 +270,16 @@ img.mfp-img{
 .col-flex{
     width: 33%;
 }
+
+//переопределяю стили для поиска яндекса
+#ya-site-form0 .ya-site-form__form .ya-site-form__input-text{
+    font-size: 16px !important;
+}
+
+#ya-site-form0 .ya-site-form__form .ya-site-form__submit{
+    display: none !important;
+}
+
+.b-head.b-head_type_search-simple{
+    display: none;
+}

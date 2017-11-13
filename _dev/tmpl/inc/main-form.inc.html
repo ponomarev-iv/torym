@@ -7,7 +7,7 @@
                 </h3>
             </div>
             <div class="col-md-9 col-sm-12">
-                <form action="" class="main-form">
+                <form id="order-form" action="" class="main-form" enctype="multipart/form-data">
                     <div class="form-row">
                         <div class="unit unit_single-left unit-33 reset-small"><input type="text" class="reg-inp" placeholder="Представьтесь" required></div>
                         <div class="unit unit-33 reset-small"><input type="tel" class="reg-inp" placeholder="Телефон" required></div>
@@ -18,8 +18,8 @@
                             <textarea name="message" id="" cols="30" rows="3" placeholder="Ваше сообщение"></textarea>
                         </div>
                         <div class="unit unit-33 reset-small">
-                            <button class="form-btn form-btn_attach">Прикрепить файл</button>
-                            <button class="form-btn form-btn_send">Отправить</button>
+                            <input class="form-btn form-btn_attach">Прикрепить файл</input>
+                            <button class="form-btn form-btn_send" type="submit">Отправить</button>
                         </div>
                     </div>
                 </form>

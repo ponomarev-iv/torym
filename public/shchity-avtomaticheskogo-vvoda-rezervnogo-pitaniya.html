@@ -2,14 +2,14 @@
 <html lang="ru">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge">    <meta name="viewport" content="width=device-width, initial-scale=1">    <link rel="icon" type="image/png" href="favicon.png" />
     <meta name="keywords" content="вру, вводно-распределительное устройство" />
     <meta name="description" content="ВВОДНО-РАСПРЕДЕЛИТЕЛЬНЫЕ УСТРОЙСТВА (ВРУ)" />
     <title>ЩИТЫ АВТОМАТИЧЕСКОГО ВВОДА РЕЗЕРВНОГО ПИТАНИЯ (АВР) | Торум купить кабели и провода в Перми и по всей России</title>
     <link rel="stylesheet" href="css/all.css">
 </head>
 <body >
-<noindex>
+
     
     <!-- START header -->
     <header class="header">
@@ -90,7 +90,7 @@
                                     </div>
                                 </div>
                             </li>
-                            <li class="main-nav__item"><a href="#" class="main-nav__link">Складская справка</a></li>
+                            <li class="main-nav__item"><a href="warehouse.html" class="main-nav__link">Складская справка</a></li>
                             <li class="main-nav__item"><a href="contact.html" class="main-nav__link">Контакты</a></li>
                         </ul>
                     </nav>
@@ -228,7 +228,7 @@
                     </h3>
                 </div>
                 <div class="col-md-9 col-sm-12">
-                    <form action="" class="main-form">
+                    <form id="order-form" action="" class="main-form" enctype="multipart/form-data">
                         <div class="form-row">
                             <div class="unit unit_single-left unit-33 reset-small"><input type="text" class="reg-inp" placeholder="Представьтесь" required></div>
                             <div class="unit unit-33 reset-small"><input type="tel" class="reg-inp" placeholder="Телефон" required></div>
@@ -239,8 +239,8 @@
                                 <textarea name="message" id="" cols="30" rows="3" placeholder="Ваше сообщение"></textarea>
                             </div>
                             <div class="unit unit-33 reset-small">
-                                <button class="form-btn form-btn_attach">Прикрепить файл</button>
-                                <button class="form-btn form-btn_send">Отправить</button>
+                                <input class="form-btn form-btn_attach">Прикрепить файл</input>
+                                <button class="form-btn form-btn_send" type="submit">Отправить</button>
                             </div>
                         </div>
                     </form>
@@ -283,7 +283,8 @@
                 </div>
                 <div class="col-md-3 col-sm-6 col-xs-6 hide-small">
                     <div class="main-footer__search">
-                        <input type="search" class="search-inp" placeholder="Поиск по сайту">
+                        <div class="ya-site-form ya-site-form_inited_no" onclick="return {'action':'http://www.torum-perm.ru/search.html','arrow':false,'bg':'transparent','fontsize':12,'fg':'#000000','language':'ru','logo':'rw','publicname':'Поиск по www.torum-perm.ru','suggest':true,'target':'_self','tld':'ru','type':2,'usebigdictionary':true,'searchid':2309882,'input_fg':'#ffffff','input_bg':'#323232','input_fontStyle':'normal','input_fontWeight':'normal','input_placeholder':'Поиск по сайту','input_placeholderColor':'#cccccc','input_borderColor':'#ffffff'}"><form action="https://yandex.ru/search/site/" method="get" target="_self" accept-charset="utf-8"><input type="hidden" name="searchid" value="2309882"/><input type="hidden" name="l10n" value="ru"/><input type="hidden" name="reqenc" value="utf-8"/><input type="search" name="text" value=""/><input type="submit" value="Найти"/></form></div><style type="text/css">.ya-page_js_yes .ya-site-form_inited_no { display: none; }</style><script type="text/javascript">(function(w,d,c){var s=d.createElement('script'),h=d.getElementsByTagName('script')[0],e=d.documentElement;if((' '+e.className+' ').indexOf(' ya-page_js_yes ')===-1){e.className+=' ya-page_js_yes';}s.type='text/javascript';s.async=true;s.charset='utf-8';s.src=(d.location.protocol==='https:'?'https:':'http:')+'//site.yandex.net/v2.0/js/all.js';h.parentNode.insertBefore(s,h);(w[c]||(w[c]=[])).push(function(){Ya.Site.Form.init()})})(window,document,'yandex_site_callbacks');</script>
+                        <!--<input type="search" class="search-inp" placeholder="Поиск по сайту">-->
                         <span class="icon icon-search"></span>
                     </div>
                 </div>
@@ -296,6 +297,6 @@
     <script src="libs/magnific.min.js"></script>
     <script src="https://api-maps.yandex.ru/2.1/?lang=ru_RU" type="text/javascript"></script>
     <script src="js/main.js"></script>
-    </noindex>
+    
     </body>
     </html>
