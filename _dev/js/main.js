@@ -227,6 +227,75 @@ $(window).resize(function(){
     swiperPartner();
 });
 
+function stylingInputFile(){
+
+    if($('.inputfile').length){
+        $( '.inputfile' ).each( function()
+        {
+            var $input	 = $( this ),
+                $label	 = $input.next( 'label' ),
+                labelVal = $label.html();
+
+            $input.on( 'change', function( e )
+            {
+                var fileName = '';
+
+                if( this.files && this.files.length > 1 )
+                    fileName = ( this.getAttribute( 'data-multiple-caption' ) || '' ).replace( '{count}', this.files.length );
+                else if( e.target.value )
+                    fileName = e.target.value.split( '\\' ).pop();
+
+                if( fileName )
+                    $label.find( 'span' ).html( fileName );
+                else
+                    $label.html( labelVal );
+            });
+        });
+    }
+}
+
+function sendForm(){
+    var form = $('#order-form');
+
+    if(form.length){
+        form.submit(function(){
+            $.ajax({
+                type: "POST",
+                url: "send.php",
+                data: $(this).serialize()
+            }).done(function () {
+                $(this).find("input").val("");
+                alert("Спасибо за обращение. В ближайшее время мы свяжемся с вами.");
+                form.trigger("reset");
+            });
+            return false;
+        })
+    }
+}
+
+function sendTemp(){
+    // =validation
+    var errorTxt = 'Ошибка отправки';
+    $("#sendform").validate({
+        submitHandler: function(form){
+            var form = document.forms.sendform,
+                formData = new FormData(form),
+                xhr = new XMLHttpRequest();
+
+            xhr.open("POST", "/send.php");
+
+            xhr.onreadystatechange = function() {
+                if (xhr.readyState == 4) {
+                    if(xhr.status == 200) {
+                        $("#sendform").html('<p class="thank">Данные отправлены!<p>');
+                    }
+                }
+            };
+            xhr.send(formData);
+        }
+    });
+}
+
 
 $(document).ready(function () {
     secondMenu();
@@ -237,6 +306,9 @@ $(document).ready(function () {
     switchMap();
     emulateAsideMenu();
     initTab();
+    stylingInputFile();
+    // sendForm();
+    sendTemp();
 });
 
 

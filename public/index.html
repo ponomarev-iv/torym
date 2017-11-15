@@ -247,18 +247,25 @@
                     </h3>
                 </div>
                 <div class="col-md-9 col-sm-12">
-                    <form id="order-form" action="" class="main-form" enctype="multipart/form-data">
+                    <form id="sendform" action="" class="main-form" enctype="multipart/form-data">
                         <div class="form-row">
-                            <div class="unit unit_single-left unit-33 reset-small"><input type="text" class="reg-inp" placeholder="Представьтесь" required></div>
-                            <div class="unit unit-33 reset-small"><input type="tel" class="reg-inp" placeholder="Телефон" required></div>
-                            <div class="unit unit-33 reset-small"><input type="email" class="reg-inp" placeholder="Электронная почта" required></div>
+                            <div class="unit unit_single-left unit-33 reset-small">
+                                <input name="name" type="text" class="reg-inp" placeholder="Представьтесь" required>
+                            </div>
+                            <div class="unit unit-33 reset-small">
+                                <input name="phone" type="tel" class="reg-inp" placeholder="Телефон" required>
+                            </div>
+                            <div class="unit unit-33 reset-small">
+                                <input name="email" type="email" class="reg-inp" placeholder="Электронная почта" required>
+                            </div>
                         </div>
                         <div class="form-row">
                             <div class="unit unit_single-left unit-66 reset-small">
                                 <textarea name="message" id="" cols="30" rows="3" placeholder="Ваше сообщение"></textarea>
                             </div>
                             <div class="unit unit-33 reset-small">
-                                <input class="form-btn form-btn_attach">Прикрепить файл</input>
+                                <input id="file" class="inputfile" name="file" type="file" data-multiple-caption="{count} files selected" multiple />
+                                <label for="file" class="form-btn form-btn_attach"><span>Прикрепить файл</span></label>
                                 <button class="form-btn form-btn_send" type="submit">Отправить</button>
                             </div>
                         </div>
@@ -417,18 +424,25 @@
                     </h3>
                 </div>
                 <div class="col-md-9 col-sm-12">
-                    <form id="order-form" action="" class="main-form" enctype="multipart/form-data">
+                    <form id="sendform" action="" class="main-form" enctype="multipart/form-data">
                         <div class="form-row">
-                            <div class="unit unit_single-left unit-33 reset-small"><input type="text" class="reg-inp" placeholder="Представьтесь" required></div>
-                            <div class="unit unit-33 reset-small"><input type="tel" class="reg-inp" placeholder="Телефон" required></div>
-                            <div class="unit unit-33 reset-small"><input type="email" class="reg-inp" placeholder="Электронная почта" required></div>
+                            <div class="unit unit_single-left unit-33 reset-small">
+                                <input name="name" type="text" class="reg-inp" placeholder="Представьтесь" required>
+                            </div>
+                            <div class="unit unit-33 reset-small">
+                                <input name="phone" type="tel" class="reg-inp" placeholder="Телефон" required>
+                            </div>
+                            <div class="unit unit-33 reset-small">
+                                <input name="email" type="email" class="reg-inp" placeholder="Электронная почта" required>
+                            </div>
                         </div>
                         <div class="form-row">
                             <div class="unit unit_single-left unit-66 reset-small">
                                 <textarea name="message" id="" cols="30" rows="3" placeholder="Ваше сообщение"></textarea>
                             </div>
                             <div class="unit unit-33 reset-small">
-                                <input class="form-btn form-btn_attach">Прикрепить файл</input>
+                                <input id="file" class="inputfile" name="file" type="file" data-multiple-caption="{count} files selected" multiple />
+                                <label for="file" class="form-btn form-btn_attach"><span>Прикрепить файл</span></label>
                                 <button class="form-btn form-btn_send" type="submit">Отправить</button>
                             </div>
                         </div>

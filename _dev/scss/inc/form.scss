@@ -81,6 +81,7 @@ textarea {
   font-size: $normal-size;
   color: #fff;
   font-family: $PT-Sans;
+  line-height: 36px;
 
   @include respondTo(small) {
     margin-bottom: 1rem;
@@ -92,9 +93,12 @@ textarea {
 
   &_attach {
     background: $disabled;
+    display: block;
+    cursor: pointer;
 
     &:hover {
       background: #c8c8c8;
+      text-decoration: underline;
     }
   }
 

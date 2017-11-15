@@ -283,3 +283,13 @@ img.mfp-img{
 .b-head.b-head_type_search-simple{
     display: none;
 }
+
+//стилизация input[type='file']
+.inputfile{
+    width: 0.1px;
+    height: 0.1px;
+    opacity: 0;
+    overflow: hidden;
+    position: absolute;
+    z-index: -1;
+}
