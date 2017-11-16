@@ -16,6 +16,15 @@
         }
     }
 
+    &__link{
+        color: #646464 !important;
+
+        &:hover{
+            text-decoration: none;
+            color: $action-color !important;
+        }
+    }
+
     &__nav{
         margin: 0;
         padding: 0;

@@ -1,0 +1,135 @@
+/**
+ * Created by Pompo on 16.11.2017.
+ */
+
+$main-color: #fff;
+
+//mobile menu
+.mobile-menu{
+  width: 100%;
+  height: 100%;
+  background-color: rgba(255,255,255,.95);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  position: fixed;
+  top:0;
+  left: 0;
+  z-index: 100;
+  text-align: center;
+  transform: translateX(-100%);
+  transition: transform ease .4s;
+  box-sizing: border-box;
+  //padding-bottom: 20%;
+
+  &.is-open{
+    transform: translateX(0);
+  }
+
+  & a {
+    font-size: 1.3em;
+    line-height: 1.2;
+    text-decoration: none;
+    text-transform: uppercase;
+    color: #323232;
+  }
+}
+
+//mobile menu button
+.mobile-btn {
+  position: absolute;
+  top: 10px;
+  left: 15px;
+  width: 32px;
+  height: 24px;
+  transform: rotate(0deg);
+  cursor: pointer;
+  display: none;
+
+  @include respondTo(tablet){
+    display: block;
+  }
+}
+
+.mobile-btn span {
+  display: block;
+  position: absolute;
+  height: 3px;
+  width: 50%;
+  background: $main-color;
+  opacity: 1;
+  transform: rotate(0deg);
+  transition: .33s ease-in-out;
+}
+
+.mobile-btn span:nth-child(even) {
+  left: 50%;
+  border-radius: 0 3px 3px 0;
+}
+
+.mobile-btn span:nth-child(odd) {
+  left:0;
+  border-radius: 3px 0 0 3px;
+}
+
+.mobile-btn span:nth-child(1), .mobile-btn span:nth-child(2) {
+  top: 0;
+}
+
+.mobile-btn span:nth-child(3), .mobile-btn span:nth-child(4) {
+  top: 9px;
+}
+
+.mobile-btn span:nth-child(5), .mobile-btn span:nth-child(6) {
+  top: 18px;
+}
+
+.mobile-btn.open span:nth-child(1),.mobile-btn.open span:nth-child(6) {
+  transform: rotate(45deg);
+}
+
+.mobile-btn.open span:nth-child(2),.mobile-btn.open span:nth-child(5) {
+  transform: rotate(-45deg);
+}
+
+.mobile-btn.open span:nth-child(1) {
+  left: 2px;
+  top: 3px;
+}
+
+.mobile-btn.open span:nth-child(2) {
+  left: calc(50% - 2px);
+  top: 3px;
+}
+
+.mobile-btn.open span:nth-child(3) {
+  left: -50%;
+  opacity: 0;
+}
+
+.mobile-btn.open span:nth-child(4) {
+  left: 100%;
+  opacity: 0;
+}
+
+.mobile-btn.open span:nth-child(5) {
+  left: 2px;
+  top: 14px;
+}
+
+.mobile-btn.open span:nth-child(6) {
+  left: calc(50% - 2px);
+  top: 14px;
+}
+
+.mobile-btn.open{
+  position: fixed;
+  z-index: 101;
+  top: 30px;
+  right: 30px;
+  left: auto;
+
+  & span{
+    background: #323232;
+  }
+}

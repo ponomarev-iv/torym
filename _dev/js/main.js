@@ -296,6 +296,18 @@ function sendTemp(){
     });
 }
 
+function mobileMenu(){
+    var mobileBtn = $('.js-mobile'),
+        mobileMenu = $('.js-mobile-menu');
+
+    if(mobileBtn.length){
+        $(mobileBtn).click(function(){
+            $(this).toggleClass('open');
+            $(mobileMenu).toggleClass('is-open');
+        })
+    }
+}
+
 
 $(document).ready(function () {
     secondMenu();
@@ -308,7 +320,8 @@ $(document).ready(function () {
     initTab();
     stylingInputFile();
     // sendForm();
-    sendTemp();
+    // sendTemp();
+    mobileMenu();
 });
 
 
