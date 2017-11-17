@@ -254,47 +254,28 @@ function stylingInputFile(){
     }
 }
 
-function sendForm(){
-    var form = $('#order-form');
-
-    if(form.length){
-        form.submit(function(){
-            $.ajax({
-                type: "POST",
-                url: "send.php",
-                data: $(this).serialize()
-            }).done(function () {
-                $(this).find("input").val("");
-                alert("Спасибо за обращение. В ближайшее время мы свяжемся с вами.");
-                form.trigger("reset");
-            });
-            return false;
-        })
-    }
-}
-
-function sendTemp(){
-    // =validation
-    var errorTxt = 'Ошибка отправки';
-    $("#sendform").validate({
-        submitHandler: function(form){
-            var form = document.forms.sendform,
-                formData = new FormData(form),
-                xhr = new XMLHttpRequest();
-
-            xhr.open("POST", "/send.php");
-
-            xhr.onreadystatechange = function() {
-                if (xhr.readyState == 4) {
-                    if(xhr.status == 200) {
-                        $("#sendform").html('<p class="thank">Данные отправлены!<p>');
-                    }
-                }
-            };
-            xhr.send(formData);
-        }
-    });
-}
+// function sendTemp(){
+//     // =validation
+//     var errorTxt = 'Ошибка отправки';
+//     $("#sendform").validate({
+//         submitHandler: function(form){
+//             var form = document.forms.sendform,
+//                 formData = new FormData(form),
+//                 xhr = new XMLHttpRequest();
+//
+//             xhr.open("POST", "/send.php");
+//
+//             xhr.onreadystatechange = function() {
+//                 if (xhr.readyState == 4) {
+//                     if(xhr.status == 200) {
+//                         $("#sendform").html('<p class="thank">Данные отправлены!<p>');
+//                     }
+//                 }
+//             };
+//             xhr.send(formData);
+//         }
+//     });
+// }
 
 function mobileMenu(){
     var mobileBtn = $('.js-mobile'),
@@ -305,6 +286,39 @@ function mobileMenu(){
             $(this).toggleClass('open');
             $(mobileMenu).toggleClass('is-open');
         })
+    }
+}
+
+function orderForm(){
+    var form = $('#order-form');
+
+    if(form.length){
+        form.submit(function(){
+            $.ajax({
+                type: "POST",
+                url: "send.php",
+                data: $(this).serialize()
+            }).done(function () {
+                $(this).find("input").val("");
+                $.magnificPopup.open({
+                    items: {
+                        src: '<div class="white-popup">Ваша заявка отправлена.</div>', // can be a HTML string, jQuery object, or CSS selector
+                        type: 'inline'
+                    }
+                });
+                // alert("Спасибо за обращение. В ближайшее время мы свяжемся с вами.");
+                form.trigger("reset");
+            });
+            return false;
+        })
+    }
+}
+
+function initPhoneMask(){
+    var input = $('.js-phone-mask');
+
+    if(input.length){
+        $('.js-phone-mask').mask('+7 (000) 00-00-000', {placeholder: "+7 "} );
     }
 }
 
@@ -322,6 +336,8 @@ $(document).ready(function () {
     // sendForm();
     // sendTemp();
     mobileMenu();
+    orderForm();
+    initPhoneMask();
 });
 
 

@@ -127,6 +127,38 @@
            </header>
     <!-- END header -->
 
+    <!-- START orderForm  -->
+    <section class="main-order">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-3 col-sm-12">
+                    <h3 class="main-order__title">
+                        Закажите&nbsp;сейчас:
+                    </h3>
+                </div>
+                <div class="col-md-9 col-sm-12">
+                    <form id="order-form" action="" class="main-form">
+                        <div class="form-row">
+                            <div class="unit unit_single-left unit-25 reset-small">
+                                <input name="name" type="text" class="reg-inp" placeholder="Представьтесь" required>
+                            </div>
+                            <div class="unit unit-25 reset-small">
+                                <input name="phone" type="tel" class="reg-inp js-phone-mask" placeholder="Телефон" required>
+                            </div>
+                            <div class="unit unit-25 reset-small">
+                                <input name="email" type="email" class="reg-inp" placeholder="Электронная почта" required>
+                            </div>
+                            <div class="unit unit-25 reset-small">
+                                <button class="form-btn form-btn_send" type="submit">Отправить</button>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- END orderForm  -->
+
     <section class="c-section c-section_sm">
         <div class="container">
             <div class="row">
@@ -242,7 +274,7 @@
                                 <input name="name" type="text" class="reg-inp" placeholder="Представьтесь" required>
                             </div>
                             <div class="unit unit-33 reset-small">
-                                <input name="phone" type="tel" class="reg-inp" placeholder="Телефон" required>
+                                <input name="phone" type="tel" class="reg-inp js-phone-mask" placeholder="Телефон" required>
                             </div>
                             <div class="unit unit-33 reset-small">
                                 <input name="email" type="email" class="reg-inp" placeholder="Электронная почта" required>
@@ -351,6 +383,7 @@
     <script src="libs/jquery.min.js"></script>
     <script src="libs/swiper.min.js"></script>
     <script src="libs/magnific.min.js"></script>
+    <script src="libs/input-mask.js"></script>
     <script src="https://api-maps.yandex.ru/2.1/?lang=ru_RU" type="text/javascript"></script>
     <script src="js/main.js"></script>
     
