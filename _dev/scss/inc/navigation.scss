@@ -12,6 +12,7 @@
     position: relative;
     overflow: hidden;
     height: 50px;
+    white-space: nowrap;
 
     &:after{
       position: absolute;

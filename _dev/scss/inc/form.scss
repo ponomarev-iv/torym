@@ -47,9 +47,9 @@
   width: 33%;
 }
 
-.unit-25 {
-  width: 25%;
-}
+//.unit-25 {
+//  width: 25%;
+//}
 
 .unit-66 {
   width: 66%;
@@ -110,6 +110,7 @@ textarea {
     background: #2cb3d5;
     font-family: $PT-Sans-bold;
     font-size: $normal-size + 1;
+    border-radius: 3px;
 
     &:hover {
       background: #38bcdd;

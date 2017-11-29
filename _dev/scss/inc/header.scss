@@ -16,6 +16,7 @@
 
   @include respondTo(small){
     padding-bottom: 20px;
+    position: relative;
   }
 
   &__wrap{
@@ -29,10 +30,6 @@
     padding: 10px 0 16px;
     font-family: $PT-Sans;
     display: inline-block;
-
-    @include respondTo(tablet){
-      margin-left: 60px;
-    }
 
     @include respondTo(small){
       display: block;
@@ -52,10 +49,14 @@
     font-size: $normal-size;
     margin-top: -7px;
 
+    @include respondTo(tablet){
+      padding: 10px 60px 0 0;
+    }
+
     @include respondTo(small){
       text-align: left;
       margin-top: 0;
-      padding-left: 60px;
+      padding-top: 0;
     }
 
     & > a{

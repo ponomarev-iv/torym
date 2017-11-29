@@ -17,7 +17,7 @@ $main-color: #fff;
   left: 0;
   z-index: 100;
   text-align: center;
-  transform: translateX(-100%);
+  transform: translateX(100%);
   transition: transform ease .4s;
   box-sizing: border-box;
   //padding-bottom: 20%;
@@ -39,7 +39,7 @@ $main-color: #fff;
 .mobile-btn {
   position: absolute;
   top: 10px;
-  left: 15px;
+  right: 15px;
   width: 32px;
   height: 24px;
   transform: rotate(0deg);
@@ -48,6 +48,10 @@ $main-color: #fff;
 
   @include respondTo(tablet){
     display: block;
+  }
+
+  @include respondTo(small){
+    top: -50px;
   }
 }
 
@@ -128,6 +132,10 @@ $main-color: #fff;
   top: 30px;
   right: 30px;
   left: auto;
+
+  @include respondTo(mobile){
+    right: 15px;
+  }
 
   & span{
     background: #323232;

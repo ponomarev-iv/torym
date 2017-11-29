@@ -162,6 +162,11 @@ textarea{
 
 .mfp-zoom-out-cur .mfp-image-holder .mfp-close{
     cursor: pointer;
+    opacity: .4;
+
+    &:hover{
+        opacity: .7;
+    }
 }
 
 .mfp-content{
@@ -276,6 +281,11 @@ img.mfp-img{
 //переопределяю стили для поиска яндекса
 #ya-site-form0 .ya-site-form__form .ya-site-form__input-text{
     font-size: 16px !important;
+    border-radius: 3px;
+}
+
+#ya-site-form0 .ya-site-form__form input.ya-site-form__input-text{
+    border-color: #979797 !important;
 }
 
 #ya-site-form0 .ya-site-form__form .ya-site-form__submit{

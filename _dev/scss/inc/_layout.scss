@@ -16,7 +16,7 @@ body{
   padding-top: 80px;
 
   @include respondTo(small){
-    padding-top: 140px;
+    padding-top: 0;
   }
 }
 

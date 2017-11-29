@@ -42,7 +42,7 @@
         @include respondTo(small){
             width: 100%;
             font-size: $xl-size - 2;
-            margin: .75em 0 .5em;
+            margin: 0 0 .5em;
         }
     }
 
@@ -71,7 +71,7 @@
     &__wrap{
         @include respondTo(small){
             position: absolute;
-            bottom: 2px;
+            top: 200px;
             background: $bg-grey;
             padding: 10px 0;
         }

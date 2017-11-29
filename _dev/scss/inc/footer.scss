@@ -9,11 +9,6 @@
 
     @include respondTo(small){
         padding: 20px 0;
-        text-align: center;
-
-        & .logo{
-            margin: 0 auto;
-        }
     }
 
     &__link{

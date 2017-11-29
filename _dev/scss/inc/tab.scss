@@ -5,6 +5,11 @@
         display: flex;
         justify-content: space-between;
         margin-bottom: 25px;
+        align-items: center;
+
+        @include respondTo(small){
+            flex-direction: column;
+        }
 
         &_sm{
             justify-content: flex-start;
@@ -26,6 +31,16 @@
         font-size: 1.8rem;
         color: $black;
         cursor: pointer;
+
+        @include respondTo(mobile){
+            padding: 1.6rem 1rem;
+            font-size: 1.5rem;
+        }
+
+        @include respondTo(small){
+            width: 100%;
+            margin-bottom: .25em;
+        }
 
         &.current{
             background-color: #a0d7e6;
