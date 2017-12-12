@@ -1,7 +1,7 @@
 <?php
 
 $frm_name  = "Заявка с сайта Торум";
-$recepient = "design-mr@mail.ru";
+$recepient = "zakaz@torum-perm.ru";
 $sitename  = "Torum-Perm";
 $subject   = "Новая заявка с сайта \"$sitename\"";
 

@@ -254,28 +254,40 @@ function stylingInputFile(){
     }
 }
 
-// function sendTemp(){
-//     // =validation
-//     var errorTxt = 'Ошибка отправки';
-//     $("#sendform").validate({
-//         submitHandler: function(form){
-//             var form = document.forms.sendform,
-//                 formData = new FormData(form),
-//                 xhr = new XMLHttpRequest();
-//
-//             xhr.open("POST", "/send.php");
-//
-//             xhr.onreadystatechange = function() {
-//                 if (xhr.readyState == 4) {
-//                     if(xhr.status == 200) {
-//                         $("#sendform").html('<p class="thank">Данные отправлены!<p>');
-//                     }
-//                 }
-//             };
-//             xhr.send(formData);
-//         }
-//     });
-// }
+function sendForm(){
+
+    var form = $('#sendform');
+
+    if(form.length){
+        document.getElementById('sendform').addEventListener('submit', function(evt){
+            var http = new XMLHttpRequest(), f = this;
+            evt.preventDefault();
+            http.open("POST", "contacts.php", true);
+            http.onreadystatechange = function() {
+                if (http.readyState == 4 && http.status == 200) {
+                    $.magnificPopup.open({
+                        items: {
+                            src: '<div class="white-popup">Ваше сообщение отправлено, спасибо!</div>',
+                            type: 'inline'
+                        }
+                    });
+                    // alert(http.responseText);
+                    if (http.responseText.indexOf(f.name.value) == 0) {
+                        f.message.removeAttribute('value');
+                        f.message.value='';
+                    }
+                }
+            }
+            http.onerror = function() {
+                alert('Извините, данные не были переданы');
+            }
+            http.send(new FormData(f));
+            form.find('input').val('');
+            form.trigger("reset");
+            $('.form-btn_attach').find('span').html('Прикрепить файл');
+        }, false);
+    }
+}
 
 function mobileMenu(){
     var mobileBtn = $('.js-mobile'),
@@ -302,7 +314,7 @@ function orderForm(){
                 $(this).find("input").val("");
                 $.magnificPopup.open({
                     items: {
-                        src: '<div class="white-popup">Ваша заявка отправлена.</div>', // can be a HTML string, jQuery object, or CSS selector
+                        src: '<div class="white-popup">Ваша заявка отправлена.</div>',
                         type: 'inline'
                     }
                 });
@@ -333,8 +345,7 @@ $(document).ready(function () {
     emulateAsideMenu();
     initTab();
     stylingInputFile();
-    // sendForm();
-    // sendTemp();
+    sendForm();
     mobileMenu();
     orderForm();
     initPhoneMask();
